@@ -1,1 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+$primary : #108030;
+
+$font-family-sans-serif : 'Montserrat', sans-serif;
+$navbar-nav-link-padding-x : 1.5rem;
+
+$btn-font-size-lg: 1rem;
+$btn-padding-x-lg: 1.2rem;
+$btn-padding-y-lg: .4rem;
+
+$border-radius: .6rem;
+$border-radius-lg: .6rem;
+
 @import "bootstrap/scss/bootstrap.scss";
+
+.nav-link{
+  transition: transform .3s;
+}
+.nav-item .active{
+  color: #ffff !important;
+}
+.brand-logo{
+  height: 40px;
+  transition: .8s;
+}
+.navbar{
+  &:hover .brand-logo{
+    transform: rotateY(180deg);
+  }
+  &:hover .nav-link.active{
+    transform: translateY(-3px);
+  }
+}
+#services{
+  svg{
+    fill: $primary;
+  }
+}
+.card-img{
+  transition: transform .3s;
+}
+.card{
+  transition: transform .3s;
+  &:hover{
+    transform: translateY(-10px);
+    box-shadow: $box-shadow;
+  }
+  &:hover .card-img{
+    transform: rotate(45deg);
+  }
+}
